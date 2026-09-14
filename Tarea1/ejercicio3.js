@@ -67,6 +67,6 @@ app.get("/inventario/alertas", (req, res) => {
 
   return res.status(200).json({
     mensaje: "no hay productos con stock bajo",
-  });
-});
+  })
+})
 
