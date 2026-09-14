@@ -1,0 +1,92 @@
+---PASO 1
+
+- crear carpeta
+-npm init -y
+agregar "type": "module" en package,json
+
+y en scripts
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+
+
+---PASO 2
+
+- npm install express @prisma/client @prisma/adapter-pg pg dotenv
+- npm install -D prisma nodemon
+
+-npm uninstall prisma @prisma/client
+-npm install prisma@7.10 @prisma/client@7.10
+-npx prisma generate
+
+
+---PASO 3
+
+- crear proyeco en neon
+-crear el archivo .env y poner DATABASE_URL
+-crear archivo .gitignore y poner .env y node_modules/
+
+
+---PASO 4 
+-npx prisma init
+-se configura el archivo 'prisma7.config.ts'
+import { defineConfig, env } from "prisma/config";
+url: env("DATABASE_URL"),
+
+
+---PASO 5
+
+-archivo 'schema.prisma'
+- output   = "../generated/prisma" se borra
+-hacer el model segun el proyecto
+
+
+---PASO 6
+
+-npx prisma migrate dev --name init
+
+
+---PASO 7
+
+-crear la carpeta src
+    /controllers
+    /middlewares
+    /routes
+    /db.js
+    /index.js
+
+
+---PASO 8
+
+-archivo db.js 
+
+
+
+---PASO 9
+
+-index.js
+
+
+
+---PASO 10
+
+-middlewares
+
+
+
+---PASO 11
+
+-metodos en el controller
+
+
+
+---PASO 12 
+
+-archivo routes
+ahi a cada metodo se le hace la ruta y el endpoint
+
+
+---PASO 13
+
+index.js
+
+
