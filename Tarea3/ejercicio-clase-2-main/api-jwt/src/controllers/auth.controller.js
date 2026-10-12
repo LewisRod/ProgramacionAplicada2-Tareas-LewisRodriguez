@@ -27,12 +27,10 @@ export const registro = async (req, res, next) => {
   }
 };
 
-
-
 export const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
-    
+
     if (!email || !password) {
       return res.status(400).json({
         error: "Email y password son obligatorios",
@@ -55,4 +53,11 @@ export const login = async (req, res, next) => {
   } catch (err) {
     next(err);
   }
+};
+
+export const verificarSesion = (req, res) => {
+  res.json({
+    autenticado: true,
+    usuario: req.usuario,
+  });
 };
